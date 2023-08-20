@@ -8,6 +8,13 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        default: ['Inter', 'sans-serif'],
+        mono: ['Fira Code', 'sans-serif'],
+        source: ["source-serif-pro", 'serif'],
+        poppins: ["Poppins", 'serif'],
+        lusitana: ['Lusitana', 'Inter'],
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
