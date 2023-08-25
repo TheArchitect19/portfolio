@@ -18,6 +18,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <link href='https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&display=swap' rel='stylesheet' type='text/css' />
+      </head>
+
       <body className={`${inter.className} transition ease-in-out duration-500`}>
         <Navbar />
         <div className='w-full xl:flex xl:flex-col xl:items-center'>

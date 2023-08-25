@@ -39,7 +39,7 @@ const Navbar = () => {
         px-4
         md:px-8
         lg:px-16
-        pt-8
+        py-10 sticky top-0 left-0 w-full h-16 bg-inherit z-10
       `}>
         <h2
           className='text-3xl font-extrabold cursor-pointer'

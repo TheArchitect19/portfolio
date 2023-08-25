@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { BiRightArrowAlt } from "react-icons/bi"
-import { FaGithub, FaInstagram, FaKaggle, FaLinkedin, FaLinkedinIn, FaTwitter, FaTwitterSquare } from 'react-icons/fa'
+import { FaGithub, FaInstagram, FaKaggle, FaLinkedin, FaLinkedinIn, FaSpotify, FaTwitter, FaTwitterSquare } from 'react-icons/fa'
 
 const experiences = [
   {
@@ -113,10 +113,16 @@ export default function Home() {
               <FaKaggle size={23} />
             </button>
           </Link>
+
+          <Link target="_blank" href="https://open.spotify.com/user/0xxxne1qdv17su3g35305idgd?si=1f101d1def424ab4">
+            <button className='gap-2 text-secondary hover:text-white hvr-float rounded-full transition-all duration-500'>
+              <FaSpotify size={25} />
+            </button>
+          </Link>
         </div>
       </div>
 
-      <div id='about' className='flex flex-col gap-6 pt-8'>
+      <div id='about' className='flex flex-col gap-6 pt-28'>
         <div className='flex flex-row gap-2 items-end'>
           <p className='font-mono text-2xl text-sky-500'>01.</p>
           {/* text-gray-700 dark:text-gray-200 */}
@@ -148,12 +154,12 @@ export default function Home() {
           </div>
 
           <div className='w-[30%] h-[360px]'>
-            <div className='w-full h-full relative rounded-md bg-sky-500'>
+            <div className='w-full h-full relative rounded-md bg-sky-600'>
               <Image
                 unoptimized
                 src="/images/swapnil.jpg"
                 alt="Picture of the author"
-                className='h-full w-full object-cover rounded-md absolute bottom-3 right-3'
+                className='h-full w-full object-cover rounded-md absolute bottom-2 right-2 hover:bottom-2.5 hover:right-3 hue-rotate-90 hover:filter-none transition-all duration-200'
                 width={500}
                 height={500}
               />
@@ -248,7 +254,7 @@ export default function Home() {
         </div>
       </div>
       
-      <div id='contact' className='flex flex-col gap-8 h-[90vh] items-center justify-center'>
+      <div id='contact' className='flex flex-col gap-8 h-[80vh] items-center justify-center'>
         <div className='flex flex-col gap-4 items-center justify-center'>
           <p className='font-mono text-sky-500'> 04. What's Next? </p>
           <h2 className='font-extrabold text-5xl'> Get In Touch </h2>
