@@ -1,88 +1,45 @@
-'use client';
+'use client'
 
-import React, { useState } from 'react';
-import Link from 'next/link';
-import { usePathname, useRouter } from 'next/navigation';
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { FiMoon } from "react-icons/fi";
 
-import { RxHamburgerMenu, RxCross1 } from "react-icons/rx";
-
-interface NavbarLinkProps {
+interface CustomLinkProps {
   href: string;
-  text: string;
-  icon?: string;
-  onClick?: () => void;
-}
+  children: React.ReactNode;
+};
 
-const NavbarLink: React.FC<NavbarLinkProps> = ({ href, icon, text }) => {
-  return (
-    <Link
-      href={href}
-      className={'font-semibold text-[15px] hover:text-sky-600 dark:hover:text-sky-400 transition-colors ease-in-out duration-500'}
-    >
-      <span className='text-lg mr-0.5'> {icon} </span> {text}
-    </Link>
-  );
-}
-
-const Navbar = () => {
-  const [navbarDisplay, setNavbarDisplay] = useState("hidden");
-
-  const router = useRouter();
+export const CustomLink: React.FC<CustomLinkProps> = ({ href, children }) => {
   const pathname = usePathname();
 
   return (
-    <>
-      <nav className={`
-        flex flex-row
-        items-center
-        justify-between
-        px-4
-        md:px-8
-        lg:px-16
-        pt-8
-      `}>
-        <h2
-          className='text-3xl font-extrabold cursor-pointer'
-          onClick={() => router.push("/")}
-        >
-          स्वप्निल
-        </h2>
+    <Link href={href} className="font-medium relative group">
+      {children}
 
-        <div className='flex items-center'>
-          <div className='hidden flex-row items-center gap-10 lg:flex'>
-            <NavbarLink href={"#about"} icon={"💁🏽‍♂️"} text={"About"} />
-            <NavbarLink href={"#experience"} icon={"💾"} text={"Experience"} />
-            <NavbarLink href={"#projects"} icon={"⚙️"} text={"Projects"} />
-            <NavbarLink href={"#contact"} icon={"📞"} text={"Contact"} />
-          </div>
+      <span className={`h-[2px] inline-block bg-black absolute left-0 bottom-0.5 group-hover:w-full transition-[width] ease-linear duration-300 ${pathname === href ? 'w-full' : 'w-0'}`}> &nbsp; </span>
+    </Link>
+  )
+}
 
-          <button
-            className='flex items-center justify-center w-8 h-8 ml-2 rounded-md hover:bg-neutral-200 dark:hover:bg-neutral-700 transition-colors lg:hidden'
-            onClick={() => setNavbarDisplay("flex")}
-          >
-            <RxHamburgerMenu />
-          </button>
+const Navbar = () => {
+  return (
+    <div className='w-full px-7 py-4 relative flex justify-between items-center bg-slate-300'>
+      <div className="flex flex-row items-center gap-16">
+        <div className="bg-black rounded-full pt-2.5 pb-1.5 px-3">
+          <h2 className="text-[28px] font-extrabold font-poppins text-white"> स्व </h2>
         </div>
-      </nav>
 
-      {/* Mobile Navbar */}
+        <CustomLink href="/"> Home </CustomLink>
+        <CustomLink href="/timeline"> Timeline </CustomLink>
+        <CustomLink href="/projects"> Projects </CustomLink>
+        <CustomLink href="/services"> Services </CustomLink>
+        <CustomLink href="/contact"> Contact </CustomLink>
+      </div>
 
-      <nav className={`${navbarDisplay} fixed top-0 left-0 flex flex-col items-center justify-center w-full h-full bg-inherit z-10`}>
-        <button
-          className='flex items-center justify-center w-8 h-8 absolute right-4 top-4 rounded-md hover:bg-neutral-200 dark:hover:bg-neutral-700 transition-colors'
-          onClick={() => setNavbarDisplay("hidden")}
-        >
-          <RxCross1 />
-        </button>
-
-        <div className='flex flex-col items-center gap-3'>
-            <NavbarLink href={"/"} icon={"💁🏽‍♂️"} text={"About"} onClick={() => setNavbarDisplay("hidden")} />
-            <NavbarLink href={"/"} icon={"⚙️"} text={"Skills"} onClick={() => setNavbarDisplay("hidden")} />
-            <NavbarLink href={"/"} icon={"💾"} text={"Projects"} onClick={() => setNavbarDisplay("hidden")} />
-            <NavbarLink href={"/"} icon={"📞"} text={"Contact"} onClick={() => setNavbarDisplay("hidden")} />
-        </div>
-      </nav>
-    </>
+      <button className='rounded-xl p-2 bg-purple-600'>
+        <FiMoon size={20} color="white" />
+      </button>
+    </div>
   )
 }
 

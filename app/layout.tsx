@@ -1,14 +1,16 @@
-import './globals.css'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Montserrat } from 'next/font/google'
 
-import Navbar from './components/Navbar'
+import './globals.css'
 
-const inter = Inter({ subsets: ['latin'] })
+import Navbar from './components/navbar'
+import Footer from './components/footer'
+
+const montserrat = Montserrat({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Swapnil Sachan',
-  description: 'This is my portfolio website, where you can get to know more about my career in tech and other spaces.  My projects, experiences and contact links can also be found here.',
+  title: 'Swapnil Sachan | Portfolio',
+  description: 'This is my personal portfolio website.',
 }
 
 export default function RootLayout({
@@ -18,11 +20,16 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} transition ease-in-out duration-500`}>
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet" />
+      </head>
+
+      <body className={montserrat.className}>
         <Navbar />
-        <div className='w-full xl:flex xl:flex-col xl:items-center'>
-          {children}
-        </div>
+        {children}
+        <Footer />
       </body>
     </html>
   )
