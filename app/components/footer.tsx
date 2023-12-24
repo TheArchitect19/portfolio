@@ -2,7 +2,7 @@ import { IconType } from 'react-icons'
 import Link from 'next/link'
 
 import { CustomLink } from './navbar'
-import { FiGithub, FiInstagram, FiLinkedin, FiX } from 'react-icons/fi';
+import { FiGithub, FiInstagram, FiLinkedin, FiTwitter } from 'react-icons/fi';
 
 interface SocialLinkProps {
   href: string;
@@ -11,10 +11,10 @@ interface SocialLinkProps {
 };
 
 const SocialLink: React.FC<SocialLinkProps> = ({ href, Icon, color }) => {
-  if (color == 'blue') color = 'bg-blue-500'
-  else if (color == 'purple') color = 'bg-purple-500'
-  else if (color == 'red') color = 'bg-red-500'
-  else if (color == 'green') color = 'bg-green-500'
+  if (color == 'blue') color = 'bg-blue-600'
+  else if (color == 'pink') color = 'bg-pink-500'
+  else if (color == 'green') color = 'bg-green-900'
+  else if (color == 'sky') color = 'bg-sky-500'
 
   return (
     <div className={`${color} rounded-full p-2.5 hover:scale-110 ease-in-out duration-300`}>
@@ -37,10 +37,10 @@ const Footer = () => {
         </div>
 
         <div className='flex flex-row gap-6'>
-          <SocialLink href='/github' Icon={FiGithub} color='blue' />
-          <SocialLink href='/instagram' Icon={FiInstagram} color='green' />
-          <SocialLink href='/twitter' Icon={FiX} color='purple' />
-          <SocialLink href='/linkedin' Icon={FiLinkedin} color='red' />
+          <SocialLink href='/instagram' Icon={FiInstagram} color='pink' />
+          <SocialLink href='/twitter' Icon={FiTwitter} color='sky' />
+          <SocialLink href='/github' Icon={FiGithub} color='green' />
+          <SocialLink href='/linkedin' Icon={FiLinkedin} color='blue' />
         </div>
       </div>
 
