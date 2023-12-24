@@ -26,7 +26,7 @@ const SocialLink: React.FC<SocialLinkProps> = ({ href, Icon, color }) => {
 const Footer = () => {
   return (
     <footer className='w-full flex flex-col gap-8 pb-8 items-center justify-center'>
-      <div className='w-[80%] h-[1px] bg-neutral-400' />
+      <div className='w-[90%] xl:w-[80%] h-[1px] bg-neutral-400' />
       <h3 className='text-3xl font-semibold'> Swapnil's </h3>
 
       <div className='flex flex-col gap-5 items-center'>

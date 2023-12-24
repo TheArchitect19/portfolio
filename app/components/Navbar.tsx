@@ -3,23 +3,13 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { IconType } from "react-icons";
-import { BsPersonBadge, BsWindowDash } from "react-icons/bs";
-import { FaMobileScreen, FaTimeline } from "react-icons/fa6";
 
 import { FiMoon, FiX } from "react-icons/fi";
-import { HiHomeModern, HiOutlineSquares2X2 } from "react-icons/hi2";
+import { HiOutlineSquares2X2 } from "react-icons/hi2";
 
 interface CustomLinkProps {
   href: string;
   children: React.ReactNode;
-};
-
-interface MobileLinkProps {
-  href: string;
-  children: React.ReactNode;
-  Icon: IconType;
-  color: string;
 };
 
 export const CustomLink: React.FC<CustomLinkProps> = ({ href, children }) => {
@@ -34,26 +24,6 @@ export const CustomLink: React.FC<CustomLinkProps> = ({ href, children }) => {
   )
 }
 
-const MobileLink: React.FC<MobileLinkProps> = ({ href, children, Icon, color }) => {
-  const pathname = usePathname();
-
-  if (color === 'amber') color = 'bg-amber-600 text-white border-none'
-  if (color === 'blue') color = 'bg-blue-600 text-white border-none'
-  if (color === 'green') color = 'bg-green-600 text-white border-none'
-  if (color === 'yellow') color = 'bg-yellow-600 text-white border-none'
-  if (color === 'fuchsia') color = 'bg-fuchsia-600 text-white border-none'
-
-  return (
-    <Link
-      href={href}
-      className={`flex flex-col items-center rounded-lg w-28 gap-2 p-3 ${href === pathname ? 'hidden' : 'bg-white text-black border-2 border-black'}`}
-    >
-      <Icon size={30} />
-      <span className='font-medium'> {children} </span>
-    </Link>
-  )
-}
-
 const Navbar = () => {
   const [navbarDisplay, setNavbarDisplay] = useState(false);
 
@@ -61,7 +31,7 @@ const Navbar = () => {
   if (!navbarDisplay) {
     navbarStyle = 'top-[-290px]';
   } else {
-    navbarStyle = 'top-[90px]';
+    navbarStyle = 'top-[95px]';
   }
 
   return (
@@ -100,19 +70,15 @@ const Navbar = () => {
       </div>
 
       <div
-        className={`absolute z-10 w-full flex flex-row md:flex-row gap-2 items-center justify-center bg-white rounded-xl shadow-xl shadow-blue-500/20 transition-all duration-300 p-8 ${navbarStyle}`}
+        className={`absolute right-8 z-10 w-44 flex flex-col gap-2 items-start justify-center bg-white rounded-xl shadow-xl transition-all duration-300 p-8 ${navbarStyle}`}
+        style={{ boxShadow: '0 6px 15px 0 rgba(37,95,235,0.4)' }}
         onClick={() => {setNavbarDisplay(!navbarDisplay)}}
       >
-        <div className='flex flex-row gap-2'>
-          <CustomLink href="/"> Home </CustomLink>
-          <CustomLink href="/timeline"> Timeline </CustomLink>
-          <CustomLink href="/projects"> Projects </CustomLink>
-        </div>
-
-        <div className='flex flex-row gap-2'>
-          <CustomLink href="/services"> Services </CustomLink>
-          <CustomLink href="/contact"> Contact </CustomLink>
-        </div>
+        <CustomLink href="/"> Home </CustomLink>
+        <CustomLink href="/timeline"> Timeline </CustomLink>
+        <CustomLink href="/projects"> Projects </CustomLink>
+        <CustomLink href="/services"> Services </CustomLink>
+        <CustomLink href="/contact"> Contact </CustomLink>
       </div>
     </div>
   )
