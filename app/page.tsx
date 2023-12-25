@@ -3,6 +3,10 @@ import Link from "next/link";
 import { IconType } from "react-icons";
 import { FaGithub, FaInstagram, FaLinkedin, FaSpotify, FaTwitter } from "react-icons/fa6";
 import { HiOutlineDocumentText } from "react-icons/hi";
+import FavoriteProjects from "./components/favorite_projects";
+import LatestCode from "./components/latest_code";
+import getLatestRepos from "@/lib/getlatestRepos";
+// import userData from "@/constants/data";
 
 interface SocialLinkProps {
   href: string;
@@ -24,9 +28,12 @@ const SocialLink: React.FC<SocialLinkProps> = ({ href, Icon, color }) => {
   )
 }
 
-export default function Home() {
+export default async function Home() {
+  const token = process.env.GITHUB_AUTH_TOKEN;
+  const repositories: any = await getLatestRepos(token as string);
+
   return (
-    <div className='flex items-center justify-center w-full'>
+    <div className='flex flex-col items-center justify-center w-full'>
       <div className='flex flex-col-reverse gap-10 lg:gap-0 lg:flex-row items-center justify-between min-h-[92vh] w-[90%] xl:w-[85%] 2xl:w-[1300px] py-16 lg:py-0'>
         <div className='flex  flex-col-reverse xl:flex-row gap-10 2xl:gap-20'>
           <div className='flex flex-row self-start xl:flex-col xl:self-center justify-center'>
@@ -62,6 +69,9 @@ export default function Home() {
 
         <div className='home__img' />
       </div>
+
+      <FavoriteProjects />
+      <LatestCode repositories={repositories} />
     </div>
   )
 }
