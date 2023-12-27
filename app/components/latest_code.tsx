@@ -15,7 +15,7 @@ export default function LatestCode({ repositories }: any) {
 
           <a
             href={`https://github.com/swapnilsachan03`}
-            className="mb-14 md:mb-0 px-4 py-3 rounded-md bg-white shadow-lg text-xl font-semibold flex flex-row space-x-4 items-center border-2 border-dashed hover:border-solid border-cyan-500"
+            className="mb-14 md:mb-0 px-4 py-3 rounded-md dark:bg-zinc-950 shadow-lg text-xl font-semibold flex flex-row space-x-4 items-center border-2 border-dashed hover:border-solid border-cyan-500"
           >
             <BiLinkExternal size={22} />
             <p className='text-sm'> View GitHub </p>
@@ -35,7 +35,7 @@ export default function LatestCode({ repositories }: any) {
 
 const GithubRepoCard = ({ latestRepo }: any) => {
   return (
-    <div className="bg-slate-300/10 border-[1px] border-teal-500 shadow-md rounded-lg p-4 md:p-5">
+    <div className="bg-zinc-300/10 dark:bg-zinc-600/10 border-[1px] border-teal-500 dark:border-teal-800 shadow-md rounded-lg p-4 md:p-5">
       <h1 className="font-semibold text-xl text-teal-600">
         {latestRepo.name}
       </h1>
@@ -46,11 +46,11 @@ const GithubRepoCard = ({ latestRepo }: any) => {
       
       <a
         href={latestRepo.clone_url}
-        className="font-semibold group flex flex-row space-x-2 w-full items-center text-teal-900"
+        className="font-semibold group flex flex-row space-x-2 w-full items-center text-teal-900 dark:text-teal-100"
       >
         <p>View Repository </p>
       
-        <div className="transform  group-hover:translate-x-2 transition duration-300">
+        <div className="transform group-hover:translate-x-2 transition duration-300">
           &rarr;
         </div>
       </a>

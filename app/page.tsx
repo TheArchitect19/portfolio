@@ -5,6 +5,7 @@ import { FaGithub, FaInstagram, FaLinkedin, FaSpotify, FaTwitter } from "react-i
 import { HiOutlineDocumentText } from "react-icons/hi";
 
 import FavoriteProjects from "@/app/components/favorite_projects";
+
 import LatestCode from "@/app/components/latest_code";
 import getLatestRepos from "@/lib/getlatestRepos";
 
@@ -16,7 +17,7 @@ interface SocialLinkProps {
 
 const SocialLink: React.FC<SocialLinkProps> = ({ href, Icon, color }) => {
   if (color == 'blue') color = 'text-blue-600'
-  else if (color == 'gray') color = 'text-neutral-800'
+  else if (color == 'gray') color = 'text-neutral-800 dark:text-white'
   else if (color == 'sky') color = 'text-sky-500'
   else if (color == 'pink') color = 'text-pink-500'
   else if (color == 'green') color = 'text-green-500'
@@ -49,7 +50,7 @@ export default async function Home() {
               <h1 className='text-[40px] md:text-6xl font-bold'> Swapnil Sachan </h1>
 
               <div className='flex flex-row gap-3 items-center'>
-                <div className='h-[1px] w-36 bg-black'></div>
+                <div className='h-[1px] w-36 bg-black dark:bg-white'></div>
                 <h2 className='text-base md:text-lg'> Full Stack Developer </h2>
               </div>
             </div>

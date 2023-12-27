@@ -13,7 +13,7 @@ const FavoriteProjects = () => {
 
           <Link
             href="/projects"
-            className="mb-20 md:mb-0 px-4 py-3 rounded-md bg-white shadow-lg text-xl font-semibold flex flex-row space-x-4 items-center border-2 border-dashed hover:border-solid border-cyan-500"
+            className="mb-20 md:mb-0 px-4 py-3 rounded-md dark:bg-zinc-950 shadow-lg text-xl font-semibold flex flex-row space-x-4 items-center border-2 border-dashed hover:border-solid border-cyan-500"
           >
             <BiLinkExternal size={22} />
             <p className='text-sm md:text-base'> View all </p>

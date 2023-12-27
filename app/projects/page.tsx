@@ -19,12 +19,12 @@ const ProjectDetails: React.FC<ProjectDetailsProps>  = ({
     <div className='w-full flex flex-col md:flex-row'>
       <div className='w-full md:w-1/2 flex flex-col gap-8 mb-8 md:pb-0 md:pr-10'>
         <div className='flex flex-col gap-2'>
-          <h3 className='font-bold text-[36px] text-orange-900'> {title} </h3>
+          <h3 className='font-bold text-[36px] text-orange-700 dark:text-orange-400'> {title} </h3>
 
           <div className='flex flex-row gap-16'>
             { github && (
               <Link href={github} target='_blank'>
-                <button className='flex flex-row gap-2 items-center text-neutral-700'>
+                <button className='flex flex-row gap-2 items-center text-neutral-700 dark:text-neutral-400'>
                   <FaGithub size={24} />
                   <p className='font-medium underline underline-offset-2'> GitHub </p>
                 </button>
@@ -33,7 +33,7 @@ const ProjectDetails: React.FC<ProjectDetailsProps>  = ({
 
             { link && (
               <Link href={link} target='_blank'>
-                <button className='flex flex-row gap-2 items-center text-neutral-700'>
+                <button className='flex flex-row gap-2 items-center text-neutral-700 dark:text-neutral-400'>
                   <BsGlobe size={24} />
                   <p className='font-medium underline underline-offset-2'> Website </p>
                 </button>

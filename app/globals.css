@@ -4,6 +4,41 @@
 
 @import url(./hover.css);
 
+/* Global dark theme styling */
+
+.dark {
+  --color-bg-primary: #18181B;
+  --color-bg-secondary: #030712;
+  --color-text-primary: #fff;
+  --color-text-secondary: rgb(163, 163, 163);
+  --color-text-accent: #81e6d9;
+}
+
+.light {
+  --color-bg-primary: #ffffff;
+  --color-bg-secondary: #edf2f7;
+  --color-text-primary: #000;
+  --color-text-secondary: rgb(115, 115, 115);
+  --color-text-accent: #2b6cb0;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-bg-primary);
+    color: var(--color-text-primary);
+  }
+
+  .text-secondary {
+    color: var(--color-text-secondary);
+  }
+
+  .bg-secondary {
+    background-color: var(--color-bg-secondary);
+  }
+}
+
+/* Home page profile picture border animation */
+
 .home__img {
   background: url(../public/images/profile.jpg);
   background-repeat: no-repeat;

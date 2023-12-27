@@ -25,11 +25,11 @@ const Page = () => {
                   contentArrowStyle={{ borderRight: '7px solid  rgb(245 158 11)' }}
                   iconStyle={{ background: 'rgb(33, 150, 243)', border: 'solid rgb(21 94 117)', color: '#fff' }}
                   icon={<item.icon size={30} />}
-                  contentStyle={{ borderRadius: '7px', border: '1px dashed rgb(245 158 11)', boxShadow: '0 4px 10px -4px rgba(159,18,57,0.25)' }}
+                  contentStyle={{ borderRadius: '7px', border: '1px dashed rgb(245 158 11)', boxShadow: '0 4px 10px -4px rgba(159,18,57,0.25)', background: 'rgba(39, 39, 42, 0.07)' }}
                 >
                   <h3 className='text-amber-600 font-bold text-xl'> {item.title} </h3>
                   <h4 className='font-medium text-base'> {item.organization} </h4>
-                  <h4 className='text-sm text-neutral-600'> {item.location} </h4>
+                  <h4 className='text-sm text-neutral-500'> {item.location} </h4>
                   <p className='text-base'> {item.description} </p>
                 </VerticalTimelineElement>
               )

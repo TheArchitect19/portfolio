@@ -26,7 +26,7 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet" />
       </head>
 
-      <body className={montserrat.className}>
+      <body className={`${montserrat.className} transition ease-linear duration-200`}>
         <Navbar />
         {children}
         <Footer />
