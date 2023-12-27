@@ -39,7 +39,9 @@ const Navbar = () => {
       <div className='w-full px-7 py-4 relative bg-white flex justify-between items-center z-20'>
         <div className="flex flex-row items-center gap-16">
           <div className="bg-orange-800 rounded-full pt-2.5 pb-1.5 px-3 shadow-md shadow-orange-500/40">
-            <h2 className="text-[28px] font-extrabold font-poppins text-white"> स्व </h2>
+            <Link href='/'>
+              <h2 className="text-[28px] font-extrabold font-poppins text-white"> स्व </h2>
+            </Link>
           </div>
 
           <div className='hidden flex-row md:flex md:gap-8 lg:gap-16'>

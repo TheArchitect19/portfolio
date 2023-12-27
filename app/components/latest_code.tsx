@@ -7,7 +7,7 @@ export default function LatestCode({ repositories }: any) {
 
   return (
     <section className="pb-14 md:pb-28">
-      <div className="max-w-6xl mx-auto px-10 md:mb-10">
+      <div className="max-w-6xl mx-auto px-6 md:mb-10">
         <div className="flex flex-col md:flex-row justify-between items-center pt-16 lg:pt-28 md:my-10 lg:my-0">
           <h1 className="text-5xl lg:text-7xl max-w-lg font-bold text-cyan-500 my-10 md:my-0 text-center lg:text-left">
             Latest Code
@@ -23,7 +23,7 @@ export default function LatestCode({ repositories }: any) {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto px-10 gap-6 lg:gap-8 gap-y-6 lg:gap-y-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto px-6 gap-6 lg:gap-8 gap-y-6 lg:gap-y-8">
         {repos &&
           repos.map((latestRepo: any, idx: number) => (
             <GithubRepoCard latestRepo={latestRepo} key={idx} />

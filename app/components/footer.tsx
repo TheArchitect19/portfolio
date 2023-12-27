@@ -37,10 +37,10 @@ const Footer = () => {
         </div>
 
         <div className='flex flex-row gap-6'>
-          <SocialLink href='/instagram' Icon={FiInstagram} color='pink' />
-          <SocialLink href='/twitter' Icon={FiTwitter} color='sky' />
-          <SocialLink href='/github' Icon={FiGithub} color='green' />
-          <SocialLink href='/linkedin' Icon={FiLinkedin} color='blue' />
+          <SocialLink href='https://www.instagram.com/swapnilsachan03' Icon={FiInstagram} color='pink' />
+          <SocialLink href='https://www.twitter.com/swapnilsachan03' Icon={FiTwitter} color='sky' />
+          <SocialLink href='https://www.github.com/swapnilsachan03' Icon={FiGithub} color='green' />
+          <SocialLink href='https://www.linkedin.com/in/swapnilsachan03' Icon={FiLinkedin} color='blue' />
         </div>
       </div>
 

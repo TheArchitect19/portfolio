@@ -3,10 +3,10 @@ import Link from "next/link";
 import { IconType } from "react-icons";
 import { FaGithub, FaInstagram, FaLinkedin, FaSpotify, FaTwitter } from "react-icons/fa6";
 import { HiOutlineDocumentText } from "react-icons/hi";
-import FavoriteProjects from "./components/favorite_projects";
-import LatestCode from "./components/latest_code";
+
+import FavoriteProjects from "@/app/components/favorite_projects";
+import LatestCode from "@/app/components/latest_code";
 import getLatestRepos from "@/lib/getlatestRepos";
-// import userData from "@/constants/data";
 
 interface SocialLinkProps {
   href: string;
@@ -23,7 +23,7 @@ const SocialLink: React.FC<SocialLinkProps> = ({ href, Icon, color }) => {
 
   return (
     <div className={`${color} rounded-full p-2.5 hvr-bob`}>
-      <Link href={href} className='transition-colors ease-in-out duration-200'> <Icon size={26} /> </Link>
+      <Link href={href} className='transition-colors ease-in-out duration-200' target='_blank'> <Icon size={26} /> </Link>
     </div>
   )
 }
@@ -37,11 +37,11 @@ export default async function Home() {
       <div className='flex flex-col-reverse gap-10 lg:gap-0 lg:flex-row items-center justify-between min-h-[92vh] w-[90%] xl:w-[85%] 2xl:w-[1300px] py-16 lg:py-0'>
         <div className='flex  flex-col-reverse xl:flex-row gap-10 2xl:gap-20'>
           <div className='flex flex-row self-start xl:flex-col xl:self-center justify-center'>
-            <SocialLink href='/github' Icon={FaLinkedin} color='blue' />
-            <SocialLink href='/github' Icon={FaGithub} color='gray' />
-            <SocialLink href='/github' Icon={FaTwitter} color='sky' />
-            <SocialLink href='/github' Icon={FaInstagram} color='pink' />
-            <SocialLink href='/github' Icon={FaSpotify} color='green' />
+            <SocialLink href='https://www.linkedin.com/in/swapnilsachan03' Icon={FaLinkedin} color='blue' />
+            <SocialLink href='https://www.github.com/swapnilsachan03' Icon={FaGithub} color='gray' />
+            <SocialLink href='https://www.twitter.com/swapnilsachan03' Icon={FaTwitter} color='sky' />
+            <SocialLink href='https://www.instagram.com/swapnilsachan03' Icon={FaInstagram} color='pink' />
+            <SocialLink href='https://open.spotify.com/user/0xxxne1qdv17su3g35305idgd?si=1a2083b468df4969' Icon={FaSpotify} color='green' />
           </div>
 
           <div className='flex flex-col gap-12 items-start'>
