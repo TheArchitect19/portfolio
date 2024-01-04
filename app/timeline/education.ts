@@ -1,4 +1,3 @@
-import { BsBuilding } from "react-icons/bs";
 import { FaGraduationCap, FaSchool } from "react-icons/fa6";
 
 const timelineElements = [

@@ -1,8 +1,14 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { Metadata } from 'next';
 
 import { FaGithub } from 'react-icons/fa6';
 import { BsGlobe } from "react-icons/bs";
+
+export const metadata: Metadata = {
+  title: 'Projects  –  Swapnil Sachan',
+  description: 'Some projects made by me using various technologies that I know.',
+}
 
 interface ProjectDetailsProps {
   title: string;
@@ -51,7 +57,7 @@ const ProjectDetails: React.FC<ProjectDetailsProps>  = ({
           alt={title}
           width={1000} height={1000}
           unoptimized
-          className='absolute top-7 left-7 sm:top-10 sm:left-10 rounded-xl min-h-[420px] object-cover'
+          className='absolute top-7 left-7 sm:top-10 sm:left-10 rounded-xl min-w-[700px] aspect-auto'
         />
       </div>
     </div>
@@ -61,7 +67,7 @@ const ProjectDetails: React.FC<ProjectDetailsProps>  = ({
 const Page = () => {
   return (
     <div className='flex items-center justify-center w-full'>
-      <div className='flex flex-col items-start gap-8 py-16 min-h-[92vh] w-[90%] xl:w-[85%] 2xl:w-[1300px]'>
+      <div className='flex flex-col items-start gap-8 pt-12 sm:pt-14 pb-20 min-h-[92vh] w-[90%] xl:w-[85%] 2xl:w-[1300px]'>
           <h1 className='text-6xl font-bold'> Projects </h1>
 
           <div className='flex flex-col gap-3.5 font-medium md:w-[700px] lg:w-[750px]'>
@@ -76,33 +82,32 @@ const Page = () => {
             <ProjectDetails
               title='CollegeNotes'
               link='https://collegenotes.swapnilsachan.tech'
-              github='https://github.com'
               src='/images/collegenotes.jpg'
             >
               <p>
-                CollegeNotes is a platform for students to share their notes and study materials with other students. It is built using the MERN stack and is hosted on AWS EC2.
+                CollegeNotes is a website built for college & university students to share their notes. On CollegeBlog, various blogs related to college life, exam preparation, study guides, etc. are available for users to read.
               </p>
             </ProjectDetails>
             
             <ProjectDetails
-              title='PDFContext'
-              link='https://collegenotes.swapnilsachan.tech'
-              github='https://github.com'
-              src='/images/test.jpg'
+              title='ContextPDF'
+              link='https://contextpdf.swapnilsachan.tech'
+              github='https://github.com/swapnilsachan03/contextpdf'
+              src='/images/contextpdf.png'
             >
               <p>
-                PDFContext is a platform for students to share their notes and study materials with other students. It is built using the MERN stack and is hosted on AWS EC2.
+                ContextPDF is a LLM powered application which provides a seamless chat experience where users can upload PDF files, create chats around them, and interact with an AI assistant.
               </p>
             </ProjectDetails>
 
             <ProjectDetails
-              title='Online Judge'
-              link='https://collegenotes.swapnilsachan.tech'
-              github='https://github.com'
-              src='/images/collegenotes.jpg'
+              title='OpenJudge'
+              link='https://openjudge.swapnilsachan.tech'
+              github='https://github.com/swapnilsachan03/openjudge'
+              src='/images/openjudge.png'
             >
               <p>
-                CollegeNotes is a platform for students to share their notes and study materials with other students. It is built using the MERN stack and is hosted on AWS EC2.
+                OpenJudge is a website where users can solve programming problems from various online judges like Codeforces, Codechef, etc. and get their solutions verified by the website.
               </p>
             </ProjectDetails>
           </div>
