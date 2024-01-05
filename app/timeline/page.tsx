@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import Timeline from './Timeline'
 
 export const metadata: Metadata = {
-  title: 'Timeline  –  Swapnil Sachan',
+  title: "Timeline",
   description: 'A brief history of my professional career and education.',
 }
 

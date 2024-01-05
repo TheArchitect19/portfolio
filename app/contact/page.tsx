@@ -6,7 +6,7 @@ import { BsLinkedin, BsTwitter } from 'react-icons/bs'
 import { MdOutlineEmail } from "react-icons/md";
 
 export const metadata: Metadata = {
-  title: 'Contact  –  Swapnil Sachan',
+  title: 'Contact Me',
   description: 'My contact information and a form to reach me!',
 }
 

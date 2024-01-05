@@ -31,7 +31,7 @@ const services = [
   },
 
   {
-    title: "Website Depployment",
+    title: "Website Deployment",
     description: "Making your website live and accessible to users, using various options like Vercel, Heroku, Amazon EC2, etc. Monitoring website performance post-deployment, can implement edge computing for better performance.",
     icon: FaOctopusDeploy,
     background: "bg-cyan-500",

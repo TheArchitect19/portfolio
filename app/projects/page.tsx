@@ -6,7 +6,7 @@ import { FaGithub } from 'react-icons/fa6';
 import { BsGlobe } from "react-icons/bs";
 
 export const metadata: Metadata = {
-  title: 'Projects  –  Swapnil Sachan',
+  title: "Projects",
   description: 'Some projects made by me using various technologies that I know.',
 }
 

@@ -5,7 +5,7 @@ import { Metadata } from 'next'
 import services from './services'
 
 export const metadata: Metadata = {
-  title: 'Services  –  Swapnil Sachan',
+  title: "Skills & Services",
   description: 'These are the skills that I can provide to my clients.',
 }
 

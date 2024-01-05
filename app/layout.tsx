@@ -9,7 +9,7 @@ import Footer from './components/footer'
 const montserrat = Montserrat({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Swapnil Sachan | Portfolio',
+  title: "Swapnil's  Portfolio",
   description: 'This is my personal portfolio website.',
 
   icons: [
